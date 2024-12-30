@@ -1,0 +1,15 @@
+.idea/
+__pycache__/
+
+# Local dev files
+gcp-sa-dev.json
+scrape.py
+
+gcp_instances.yaml
+gcp_sku.yaml
+gcp_sku.json
+gcp_machines_pricing.json
+gcp_machines_pricing.yaml
+
+# build files
+dist

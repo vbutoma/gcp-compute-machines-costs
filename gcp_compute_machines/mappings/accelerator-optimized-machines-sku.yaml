@@ -1,0 +1,33 @@
+a2:
+  cpu:
+    ondemand: '^A2 Instance Core.*'
+    cud1y: 'Commitment v1: A2 Cpu .* 1 Year'
+    cud3y: 'Commitment v1: A2 Cpu .* 3 Year'
+    spot: 'Spot Preemptible A2 Instance Core.*'
+  ram:
+    ondemand: '^A2 Instance Ram.*'
+    cud1y: 'Commitment v1: A2 Ram.*1 Year'
+    cud3y: 'Commitment v1: A2 Ram.*3 Year'
+    spot: 'Spot Preemptible A2 Instance Ram.*'
+a3:
+  cpu:
+    ondemand: 'A3 Instance Core.*'
+    cud1y: 'Commitment v1: A3 Cpu .* 1 Year'
+    cud3y: 'Commitment v1: A2 Cpu .* 3 Year'
+    spot: 'Spot Preemptible A3 Instance Core.*'
+  ram:
+    ondemand: 'A3 Instance Ram.*'
+    cud1y: 'Commitment v1: A3 Ram.*1 Year'
+    cud3y: 'Commitment v1: A3 Ram.*3 Year'
+    spot: 'Spot Preemptible A3 Instance Ram.*'
+g2:
+  cpu:
+    ondemand: 'G2 Instance Core.*'
+    cud1y: 'Commitment v1: G2 Cpu.* 1 Year'
+    cud3y: 'Commitment v1: G2 Cpu.* 3 Year'
+    spot: 'Spot Preemptible G2 Instance Core.*'
+  ram:
+    ondemand: 'G2 Instance Ram.*'
+    cud1y: 'Commitment v1: G2 Ram.* 1 Year'
+    cud3y: 'Commitment v1: G2 Ram.* 3 Year'
+    spot: 'Spot Preemptible G2 Instance Ram.*'

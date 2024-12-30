@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gcp_compute_machines"
+version = "0.0.1"
+description = ""
+authors = ["Vitaly <vit.butoma@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyyaml = "^6.0.1"
+loguru = "^0.7.2"
+google-cloud-billing = "^1.15.0"
+google-cloud-compute = "^1.23.0"
+pydantic = "^2.6.4"
+pandas = "^2.2.3"
+lxml = "^5.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

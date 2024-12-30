@@ -1,0 +1,31 @@
+h3:
+  cpu:
+    ondemand: 'H3 Instance Core.*'
+    cud1y: 'Commitment v1: H3 Cpu .* 1 Year'
+    cud3y: 'Commitment v1: H3 Cpu .* 3 Year'
+  ram:
+    ondemand: 'H3 Instance Ram.*'
+    cud1y: 'Commitment v1: H3 Ram .* 1 Year'
+    cud3y: 'Commitment v1: H3 Ram .* 3 Year'
+c2d:
+  cpu:
+    ondemand: 'C2D AMD Instance Core.*'
+    cud1y: 'Commitment v1: C2D AMD Cpu .* 1 Year'
+    cud3y: 'Commitment v1: C2D AMD Cpu .* 3 Year'
+    spot: 'Spot Preemptible C2D AMD Instance Core.*'
+  ram:
+    ondemand: 'C2D AMD Instance Ram.*'
+    cud1y: 'Commitment v1: C2D AMD Ram .* 1 Year'
+    cud3y: 'Commitment v1: C2D AMD Cpu .* 3 Year'
+    spot: 'Spot Preemptible C2D AMD Instance Ram.*'
+c2:
+  cpu:
+    ondemand: 'Compute optimized Core.*'
+    cud1y: 'Commitment: Compute optimized Core .* 1 Year'
+    cud3y: 'Commitment: Compute optimized Core .* 3 Year'
+    spot: 'Spot Preemptible Compute optimized Core.*'
+  ram:
+    ondemand: 'Compute optimized Ram.*'
+    cud1y: 'Commitment: Compute optimized Ram .* 1 Year'
+    cud3y: 'Commitment: Compute optimized Ram .* 3 Year'
+    spot: 'Spot Preemptible Compute optimized Ram.*'
