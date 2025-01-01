@@ -1,2 +1,2 @@
-from .scrapper import InstanceScrapper
+from .scraper import InstanceScraper
 from .exceptions import *

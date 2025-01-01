@@ -22,7 +22,7 @@ def nice(number: float, digits=5) -> float:
     return round(number, digits)
 
 
-class InstanceScrapper:
+class InstanceScraper:
     # 365 * 24 / 12 - GCP uses the same value
     AVG_HOURS_PER_MONTH = 730
 
