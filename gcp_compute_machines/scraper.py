@@ -1,5 +1,4 @@
 import csv
-import json
 import loguru
 import yaml
 import os
@@ -38,7 +37,6 @@ class InstanceScraper:
 
     GCP_INSTANCES_DATA = 'gcp_instances.yaml'
     GCP_SKU_DATA = 'gcp_sku.yaml'
-    GCP_SKU_DATA_JSON = 'gcp_sku.json'
     GCP_COMPUTE_ENGINE_SERVICE_NAME = 'services/6F81-5844-456A'
 
     def __init__(
@@ -217,10 +215,10 @@ class InstanceScraper:
     def get_skus_data(self, load=False, dump=False):
         self.logger.info('[GetSkusData] Started')
         unique_sku_groups = set()
-        if load and os.path.exists(self.GCP_SKU_DATA_JSON):
-            self.logger.info(f'[GetSkusData] Loading from {self.GCP_SKU_DATA_JSON}')
-            with open(self.GCP_SKU_DATA_JSON, 'r') as file:
-                return json.load(file)
+        if load and os.path.exists(self.GCP_SKU_DATA):
+            self.logger.info(f'[GetSkusData] Loading from {self.GCP_SKU_DATA}')
+            with open(self.GCP_SKU_DATA, 'r') as file:
+                return yaml.safe_load(file)
 
         client = billing_v1.CloudCatalogClient(credentials=self.credentials)
 
@@ -277,8 +275,6 @@ class InstanceScraper:
             self.logger.info(f'[GetSkusData] Saving skus data into file {self.GCP_SKU_DATA}')
             with open(self.GCP_SKU_DATA, 'w') as file:
                 yaml.dump(skus, file)
-            with open(self.GCP_SKU_DATA_JSON, 'w') as file:
-                json.dump(skus, file)
         self.logger.info('[GetSkusData] Done')
         return skus
 

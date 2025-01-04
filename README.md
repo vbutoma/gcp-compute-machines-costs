@@ -51,4 +51,4 @@ This project is under the [Apache License, Version 2.0](./LICENSE) unless noted 
 
 Please note this project is not an official Google product. 
 
-That means no warranty in costs data integrity. Use scraped data wisely. 
+That means no warranty in costs data integrity. Use scraped data wisely.
