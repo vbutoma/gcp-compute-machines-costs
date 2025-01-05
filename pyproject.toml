@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gcp_compute_machines"
-version = "0.0.1"
+version = "0.0.2"
 description = "A python package for scraping and exporting GCP Compute Machines metadata and costs information."
 authors = ["Vitaly <vit.butoma@gmail.com>"]
 license = "Apache-2.0"

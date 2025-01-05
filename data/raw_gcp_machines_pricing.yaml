@@ -228,484 +228,484 @@ machines:
     a2-ultragpu-1g:
       regions:
         asia-southeast1:
-          cud1y: 5.14909
-          cud3y: 4.29506
-          ondemand: 6.20248
-          spot: 2.41584
+          cud1y: 5.17757
+          cud3y: 4.3154
+          ondemand: 6.24769
+          spot: 2.44748
         europe-west4:
-          cud1y: 4.59559
-          cud3y: 3.83339
-          ondemand: 5.53571
-          spot: 1.85564
+          cud1y: 4.62407
+          cud3y: 3.85373
+          ondemand: 5.58092
+          spot: 1.88374
         us-central1:
-          cud1y: 4.1738
-          cud3y: 3.4815
-          ondemand: 5.0277
-          spot: 2.01103
+          cud1y: 4.19969
+          cud3y: 3.5
+          ondemand: 5.0688
+          spot: 2.0398
         us-east4:
-          cud1y: 4.70084
-          cud3y: 3.92115
-          ondemand: 5.66253
-          spot: 2.26494
+          cud1y: 4.72932
+          cud3y: 3.94149
+          ondemand: 5.70773
+          spot: 2.29658
         us-east5:
-          cud1y: 4.61346
-          cud3y: 3.8726
-          ondemand: 5.52382
-          spot: 1.78994
+          cud1y: 4.63935
+          cud3y: 3.8911
+          ondemand: 5.56491
+          spot: 1.81804
     a2-ultragpu-2g:
       regions:
         asia-southeast1:
-          cud1y: 10.29819
-          cud3y: 8.59012
-          ondemand: 12.40496
-          spot: 4.83168
+          cud1y: 10.35515
+          cud3y: 8.6308
+          ondemand: 12.49537
+          spot: 4.89497
         europe-west4:
-          cud1y: 9.19118
-          cud3y: 7.66677
-          ondemand: 11.07143
-          spot: 3.71127
+          cud1y: 9.24814
+          cud3y: 7.70746
+          ondemand: 11.16184
+          spot: 3.76747
         us-central1:
-          cud1y: 8.3476
-          cud3y: 6.96301
-          ondemand: 10.0554
-          spot: 4.02206
+          cud1y: 8.39938
+          cud3y: 7.0
+          ondemand: 10.1376
+          spot: 4.07959
         us-east4:
-          cud1y: 9.40169
-          cud3y: 7.8423
-          ondemand: 11.32505
-          spot: 4.52988
+          cud1y: 9.45865
+          cud3y: 7.88299
+          ondemand: 11.41546
+          spot: 4.59317
         us-east5:
-          cud1y: 9.22692
-          cud3y: 7.74521
-          ondemand: 11.04764
-          spot: 3.57988
+          cud1y: 9.2787
+          cud3y: 7.78219
+          ondemand: 11.12983
+          spot: 3.63608
     a2-ultragpu-4g:
       regions:
         asia-southeast1:
-          cud1y: 20.59638
-          cud3y: 17.18024
-          ondemand: 24.80992
-          spot: 9.66336
+          cud1y: 20.7103
+          cud3y: 17.26161
+          ondemand: 24.99074
+          spot: 9.78994
         europe-west4:
-          cud1y: 18.38237
-          cud3y: 15.33354
-          ondemand: 22.14285
-          spot: 7.42254
+          cud1y: 18.49628
+          cud3y: 15.41491
+          ondemand: 22.32367
+          spot: 7.53494
         us-central1:
-          cud1y: 16.6952
-          cud3y: 13.92602
-          ondemand: 20.11081
-          spot: 8.04412
+          cud1y: 16.79876
+          cud3y: 13.99999
+          ondemand: 20.27519
+          spot: 8.15919
         us-east4:
-          cud1y: 18.80338
-          cud3y: 15.6846
-          ondemand: 22.65011
-          spot: 9.05976
+          cud1y: 18.9173
+          cud3y: 15.76597
+          ondemand: 22.83093
+          spot: 9.18634
         us-east5:
-          cud1y: 18.45385
-          cud3y: 15.49041
-          ondemand: 22.09528
-          spot: 7.15976
+          cud1y: 18.55741
+          cud3y: 15.56439
+          ondemand: 22.25966
+          spot: 7.27216
     a2-ultragpu-8g:
       regions:
         asia-southeast1:
-          cud1y: 41.19276
-          cud3y: 34.36047
-          ondemand: 49.61984
-          spot: 19.32672
+          cud1y: 41.4206
+          cud3y: 34.52321
+          ondemand: 49.98148
+          spot: 19.57987
         europe-west4:
-          cud1y: 36.76473
-          cud3y: 30.66708
-          ondemand: 44.2857
-          spot: 14.84509
+          cud1y: 36.99257
+          cud3y: 30.82982
+          ondemand: 44.64735
+          spot: 15.06988
         us-central1:
-          cud1y: 33.3904
-          cud3y: 27.85204
-          ondemand: 40.22162
-          spot: 16.08824
+          cud1y: 33.59752
+          cud3y: 27.99998
+          ondemand: 40.55038
+          spot: 16.31838
         us-east4:
-          cud1y: 37.60676
-          cud3y: 31.36921
-          ondemand: 45.30022
-          spot: 18.11952
+          cud1y: 37.83459
+          cud3y: 31.53195
+          ondemand: 45.66186
+          spot: 18.37267
         us-east5:
-          cud1y: 36.9077
-          cud3y: 30.98083
-          ondemand: 44.19055
-          spot: 14.31952
+          cud1y: 37.11482
+          cud3y: 31.12877
+          ondemand: 44.51932
+          spot: 14.54431
   a3:
     a3-edgegpu-8g:
       regions:
         asia-northeast1:
-          cud1y: 87.31487
-          cud3y: 55.18832
-          ondemand: 125.7886
-          spot: 88.71856
+          cud1y: 87.8534
+          cud3y: 55.57298
+          ondemand: 126.64339
+          spot: 89.31692
         asia-northeast3:
-          cud1y: 78.29694
-          cud3y: 49.48493
-          ondemand: 112.79445
-          spot: 79.55381
+          cud1y: 78.83546
+          cud3y: 49.86959
+          ondemand: 113.64925
+          spot: 80.08066
         asia-south1:
-          cud1y: 63.40821
-          cud3y: 40.44454
-          ondemand: 91.34574
-          spot: 64.42608
+          cud1y: 63.9053
+          cud3y: 40.79961
+          ondemand: 92.13478
+          spot: 64.9784
         asia-southeast1:
-          cud1y: 78.82407
-          cud3y: 49.81806
-          ondemand: 113.55501
-          spot: 45.42195
+          cud1y: 79.27974
+          cud3y: 50.14354
+          ondemand: 114.27829
+          spot: 45.92825
         europe-west2:
-          cud1y: 69.50515
-          cud3y: 44.26856
-          ondemand: 100.12903
-          spot: 70.62089
+          cud1y: 70.00224
+          cud3y: 44.62363
+          ondemand: 100.91807
+          spot: 71.17158
         europe-west3:
-          cud1y: 71.94392
-          cud3y: 45.71781
-          ondemand: 103.64231
-          spot: 73.09881
+          cud1y: 72.44102
+          cud3y: 46.07288
+          ondemand: 104.43135
+          spot: 73.50402
         europe-west4:
-          cud1y: 77.61551
-          cud3y: 49.17601
-          ondemand: 111.81719
-          spot: 44.72786
+          cud1y: 78.07119
+          cud3y: 49.50149
+          ondemand: 112.54048
+          spot: 45.17745
         europe-west9:
-          cud1y: 70.72454
-          cud3y: 44.69752
-          ondemand: 101.88567
-          spot: 71.85985
+          cud1y: 71.20506
+          cud3y: 45.04075
+          ondemand: 102.64841
+          spot: 72.3941
         northamerica-northeast2:
-          cud1y: 67.13344
-          cud3y: 42.42762
-          ondemand: 96.71231
-          spot: 68.21111
+          cud1y: 67.58911
+          cud3y: 42.7531
+          ondemand: 97.4356
+          spot: 68.71248
         us-central1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-east4:
-          cud1y: 60.96943
-          cud3y: 38.82311
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.4251
+          cud3y: 39.14859
+          ondemand: 88.55576
+          spot: 35.63904
         us-east5:
-          cud1y: 68.66987
-          cud3y: 43.10833
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.08411
+          cud3y: 43.40422
+          ondemand: 99.5832
+          spot: 40.01951
         us-west1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-west4:
-          cud1y: 68.66987
-          cud3y: 43.3991
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.12554
+          cud3y: 43.72458
+          ondemand: 99.64895
+          spot: 39.93567
     a3-highgpu-1g:
       regions:
         asia-northeast1:
-          cud1y: 10.91436
-          cud3y: 6.89854
-          ondemand: 15.72357
-          spot: 11.08982
+          cud1y: 10.98167
+          cud3y: 6.94662
+          ondemand: 15.83042
+          spot: 11.16461
         asia-southeast1:
-          cud1y: 9.85301
-          cud3y: 6.22726
-          ondemand: 14.19438
-          spot: 5.67774
+          cud1y: 9.90997
+          cud3y: 6.26794
+          ondemand: 14.28479
+          spot: 5.74103
         australia-southeast1:
-          cud1y: 9.52647
-          cud3y: 6.06929
-          ondemand: 13.72382
-          spot: 9.6794
+          cud1y: 9.59638
+          cud3y: 6.11923
+          ondemand: 13.83478
+          spot: 9.7283
         europe-west1:
-          cud1y: 8.39168
-          cud3y: 5.30319
+          cud1y: 8.44346
+          cud3y: 5.34017
           ondemand: 12.08904
-          spot: 4.83563
+          spot: 4.89317
         europe-west3:
-          cud1y: 8.99299
-          cud3y: 5.71473
-          ondemand: 12.95529
-          spot: 9.13735
+          cud1y: 9.05513
+          cud3y: 5.75911
+          ondemand: 13.05392
+          spot: 9.188
         europe-west4:
-          cud1y: 9.70194
-          cud3y: 6.147
-          ondemand: 13.97715
-          spot: 5.59098
+          cud1y: 9.7589
+          cud3y: 6.18769
+          ondemand: 14.06756
+          spot: 5.64718
         europe-west8:
-          cud1y: 8.84057
-          cud3y: 5.58719
-          ondemand: 12.73571
-          spot: 8.98248
+          cud1y: 8.90063
+          cud3y: 5.63009
+          ondemand: 12.83105
+          spot: 9.03591
         us-central1:
-          cud1y: 7.62118
-          cud3y: 4.81654
-          ondemand: 10.97906
-          spot: 4.39159
+          cud1y: 7.67296
+          cud3y: 4.85353
+          ondemand: 11.06125
+          spot: 4.44913
         us-east4:
-          cud1y: 7.62118
-          cud3y: 4.85289
-          ondemand: 10.97906
-          spot: 4.39159
+          cud1y: 7.67814
+          cud3y: 4.89357
+          ondemand: 11.06947
+          spot: 4.45488
         us-east5:
-          cud1y: 8.58373
-          cud3y: 5.38854
-          ondemand: 12.36571
-          spot: 4.94624
+          cud1y: 8.63551
+          cud3y: 5.42553
+          ondemand: 12.4479
+          spot: 5.00244
         us-west1:
-          cud1y: 7.62118
-          cud3y: 4.81654
-          ondemand: 10.97906
-          spot: 4.39159
+          cud1y: 7.67296
+          cud3y: 4.85353
+          ondemand: 11.06125
+          spot: 4.44913
         us-west4:
-          cud1y: 8.58373
-          cud3y: 5.42489
-          ondemand: 12.36571
-          spot: 4.94624
+          cud1y: 8.64069
+          cud3y: 5.46557
+          ondemand: 12.45612
+          spot: 4.99196
     a3-highgpu-2g:
       regions:
         asia-northeast1:
-          cud1y: 21.82872
-          cud3y: 13.79708
-          ondemand: 31.44715
-          spot: 22.17964
+          cud1y: 21.96335
+          cud3y: 13.89324
+          ondemand: 31.66085
+          spot: 22.32923
         asia-southeast1:
-          cud1y: 19.70602
-          cud3y: 12.45451
-          ondemand: 28.38875
-          spot: 11.35549
+          cud1y: 19.81994
+          cud3y: 12.53588
+          ondemand: 28.56957
+          spot: 11.48206
         australia-southeast1:
-          cud1y: 19.05295
-          cud3y: 12.13859
-          ondemand: 27.44765
-          spot: 19.3588
+          cud1y: 19.19275
+          cud3y: 12.23845
+          ondemand: 27.66957
+          spot: 19.45661
         europe-west1:
-          cud1y: 16.78336
-          cud3y: 10.60637
+          cud1y: 16.88692
+          cud3y: 10.68035
           ondemand: 24.17808
-          spot: 9.67126
+          spot: 9.78633
         europe-west3:
-          cud1y: 17.98598
-          cud3y: 11.42945
-          ondemand: 25.91058
-          spot: 18.2747
+          cud1y: 18.11025
+          cud3y: 11.51822
+          ondemand: 26.10784
+          spot: 18.376
         europe-west4:
-          cud1y: 19.40388
-          cud3y: 12.294
-          ondemand: 27.9543
-          spot: 11.18196
+          cud1y: 19.5178
+          cud3y: 12.37537
+          ondemand: 28.13512
+          spot: 11.29436
         europe-west8:
-          cud1y: 17.68113
-          cud3y: 11.17438
-          ondemand: 25.47142
-          spot: 17.96496
+          cud1y: 17.80127
+          cud3y: 11.26019
+          ondemand: 25.6621
+          spot: 18.07181
         us-central1:
-          cud1y: 15.24236
-          cud3y: 9.63309
-          ondemand: 21.95812
-          spot: 8.78318
+          cud1y: 15.34592
+          cud3y: 9.70706
+          ondemand: 22.1225
+          spot: 8.89825
         us-east4:
-          cud1y: 15.24236
-          cud3y: 9.70578
-          ondemand: 21.95812
-          spot: 8.78318
+          cud1y: 15.35628
+          cud3y: 9.78715
+          ondemand: 22.13894
+          spot: 8.90976
         us-east5:
-          cud1y: 17.16747
-          cud3y: 10.77708
-          ondemand: 24.73142
-          spot: 9.89248
+          cud1y: 17.27103
+          cud3y: 10.85106
+          ondemand: 24.8958
+          spot: 10.00488
         us-west1:
-          cud1y: 15.24236
-          cud3y: 9.63309
-          ondemand: 21.95812
-          spot: 8.78318
+          cud1y: 15.34592
+          cud3y: 9.70706
+          ondemand: 22.1225
+          spot: 8.89825
         us-west4:
-          cud1y: 17.16747
-          cud3y: 10.84977
-          ondemand: 24.73142
-          spot: 9.89248
+          cud1y: 17.28138
+          cud3y: 10.93114
+          ondemand: 24.91224
+          spot: 9.98392
     a3-highgpu-4g:
       regions:
         asia-northeast1:
-          cud1y: 43.65744
-          cud3y: 27.59416
-          ondemand: 62.8943
-          spot: 44.35928
+          cud1y: 43.9267
+          cud3y: 27.78649
+          ondemand: 63.3217
+          spot: 44.65846
         asia-southeast1:
-          cud1y: 39.41204
-          cud3y: 24.90903
-          ondemand: 56.7775
-          spot: 22.71098
+          cud1y: 39.63987
+          cud3y: 25.07177
+          ondemand: 57.13915
+          spot: 22.96413
         australia-southeast1:
-          cud1y: 38.10589
-          cud3y: 24.27718
-          ondemand: 54.8953
-          spot: 38.71759
+          cud1y: 38.38551
+          cud3y: 24.4769
+          ondemand: 55.33913
+          spot: 38.91321
         europe-west1:
-          cud1y: 33.56672
-          cud3y: 21.21275
+          cud1y: 33.77384
+          cud3y: 21.36069
           ondemand: 48.35616
-          spot: 19.34253
+          spot: 19.57266
         europe-west3:
-          cud1y: 35.97196
-          cud3y: 22.8589
-          ondemand: 51.82116
-          spot: 36.54941
+          cud1y: 36.22051
+          cud3y: 23.03644
+          ondemand: 52.21568
+          spot: 36.75201
         europe-west4:
-          cud1y: 38.80776
-          cud3y: 24.58801
-          ondemand: 55.9086
-          spot: 22.36393
+          cud1y: 39.03559
+          cud3y: 24.75075
+          ondemand: 56.27024
+          spot: 22.58872
         europe-west8:
-          cud1y: 35.36227
-          cud3y: 22.34876
-          ondemand: 50.94283
-          spot: 35.92993
+          cud1y: 35.60253
+          cud3y: 22.52038
+          ondemand: 51.3242
+          spot: 36.14363
         us-central1:
-          cud1y: 30.48471
-          cud3y: 19.26617
-          ondemand: 43.91623
-          spot: 17.56637
+          cud1y: 30.69184
+          cud3y: 19.41412
+          ondemand: 44.245
+          spot: 17.7965
         us-east4:
-          cud1y: 30.48472
-          cud3y: 19.41156
-          ondemand: 43.91623
-          spot: 17.56637
+          cud1y: 30.71255
+          cud3y: 19.5743
+          ondemand: 44.27788
+          spot: 17.81952
         us-east5:
-          cud1y: 34.33493
-          cud3y: 21.55417
-          ondemand: 49.46283
-          spot: 19.78496
+          cud1y: 34.54206
+          cud3y: 21.70211
+          ondemand: 49.7916
+          spot: 20.00975
         us-west1:
-          cud1y: 30.48471
-          cud3y: 19.26617
-          ondemand: 43.91623
-          spot: 17.56637
+          cud1y: 30.69184
+          cud3y: 19.41412
+          ondemand: 44.245
+          spot: 17.7965
         us-west4:
-          cud1y: 34.33493
-          cud3y: 21.69955
-          ondemand: 49.46283
-          spot: 19.78496
+          cud1y: 34.56277
+          cud3y: 21.86229
+          ondemand: 49.82448
+          spot: 19.96784
     a3-highgpu-8g:
       regions:
         asia-northeast1:
-          cud1y: 87.31487
-          cud3y: 55.18832
-          ondemand: 125.7886
-          spot: 88.71856
+          cud1y: 87.8534
+          cud3y: 55.57298
+          ondemand: 126.64339
+          spot: 89.31692
         asia-southeast1:
-          cud1y: 78.82407
-          cud3y: 49.81806
-          ondemand: 113.55501
-          spot: 45.42195
+          cud1y: 79.27974
+          cud3y: 50.14354
+          ondemand: 114.27829
+          spot: 45.92825
         australia-southeast1:
-          cud1y: 76.21179
-          cud3y: 48.55435
-          ondemand: 109.7906
-          spot: 77.43519
+          cud1y: 76.77102
+          cud3y: 48.95381
+          ondemand: 110.67827
+          spot: 77.82642
         europe-west1:
-          cud1y: 67.13344
-          cud3y: 42.4255
+          cud1y: 67.54768
+          cud3y: 42.72139
           ondemand: 96.71231
-          spot: 38.68506
+          spot: 39.14533
         europe-west3:
-          cud1y: 71.94392
-          cud3y: 45.71781
-          ondemand: 103.64231
-          spot: 73.09881
+          cud1y: 72.44102
+          cud3y: 46.07288
+          ondemand: 104.43135
+          spot: 73.50402
         europe-west4:
-          cud1y: 77.61551
-          cud3y: 49.17601
-          ondemand: 111.81719
-          spot: 44.72786
+          cud1y: 78.07119
+          cud3y: 49.50149
+          ondemand: 112.54048
+          spot: 45.17745
         us-central1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-east4:
-          cud1y: 60.96943
-          cud3y: 38.82311
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.4251
+          cud3y: 39.14859
+          ondemand: 88.55576
+          spot: 35.63904
         us-east5:
-          cud1y: 68.66987
-          cud3y: 43.10833
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.08411
+          cud3y: 43.40422
+          ondemand: 99.5832
+          spot: 40.01951
         us-west1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-west4:
-          cud1y: 68.66987
-          cud3y: 43.3991
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.12554
+          cud3y: 43.72458
+          ondemand: 99.64895
+          spot: 39.93567
     a3-megagpu-8g:
       regions:
         asia-northeast1:
-          cud1y: 87.31487
-          cud3y: 55.18832
-          ondemand: 125.7886
-          spot: 88.71856
+          cud1y: 87.8534
+          cud3y: 55.57298
+          ondemand: 126.64339
+          spot: 89.31692
         asia-southeast1:
-          cud1y: 78.82407
-          cud3y: 49.81806
-          ondemand: 113.55501
-          spot: 45.42195
+          cud1y: 79.27974
+          cud3y: 50.14354
+          ondemand: 114.27829
+          spot: 45.92825
         australia-southeast1:
-          cud1y: 76.21179
-          cud3y: 48.55435
-          ondemand: 109.7906
-          spot: 77.43519
+          cud1y: 76.77102
+          cud3y: 48.95381
+          ondemand: 110.67827
+          spot: 77.82642
         europe-west1:
-          cud1y: 67.13344
-          cud3y: 42.4255
+          cud1y: 67.54768
+          cud3y: 42.72139
           ondemand: 96.71231
-          spot: 38.68506
+          spot: 39.14533
         europe-west3:
-          cud1y: 71.94392
-          cud3y: 45.71781
-          ondemand: 103.64231
-          spot: 73.09881
+          cud1y: 72.44102
+          cud3y: 46.07288
+          ondemand: 104.43135
+          spot: 73.50402
         europe-west4:
-          cud1y: 77.61551
-          cud3y: 49.17601
-          ondemand: 111.81719
-          spot: 44.72786
+          cud1y: 78.07119
+          cud3y: 49.50149
+          ondemand: 112.54048
+          spot: 45.17745
         us-central1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-east4:
-          cud1y: 60.96943
-          cud3y: 38.82311
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.4251
+          cud3y: 39.14859
+          ondemand: 88.55576
+          spot: 35.63904
         us-east5:
-          cud1y: 68.66987
-          cud3y: 43.10833
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.08411
+          cud3y: 43.40422
+          ondemand: 99.5832
+          spot: 40.01951
         us-west1:
-          cud1y: 60.96943
-          cud3y: 38.53235
-          ondemand: 87.83247
-          spot: 35.13274
+          cud1y: 61.38367
+          cud3y: 38.82824
+          ondemand: 88.49
+          spot: 35.59301
         us-west4:
-          cud1y: 68.66987
-          cud3y: 43.3991
-          ondemand: 98.92567
-          spot: 39.56992
+          cud1y: 69.12554
+          cud3y: 43.72458
+          ondemand: 99.64895
+          spot: 39.93567
   c2:
     c2-standard-16:
       regions:
@@ -38466,136 +38466,136 @@ machines:
     z3-highmem-176:
       regions:
         asia-northeast1:
-          cud1y: 14.65145
-          cud3y: 10.46539
-          ondemand: 23.25636
-          spot: 9.3025
+          cud1y: 17.88257
+          cud3y: 12.77334
+          ondemand: 28.38513
+          spot: 12.89263
         asia-south1:
-          cud1y: 11.86537
-          cud3y: 8.47532
-          ondemand: 18.83399
-          spot: 7.53356
+          cud1y: 14.84794
+          cud3y: 10.60573
+          ondemand: 23.56824
+          spot: 10.84753
         asia-southeast1:
-          cud1y: 14.07529
-          cud3y: 10.05385
-          ondemand: 22.34182
-          spot: 8.93669
+          cud1y: 16.80932
+          cud3y: 12.00672
+          ondemand: 26.68155
+          spot: 11.97449
         australia-southeast1:
-          cud1y: 14.26126
-          cud3y: 10.18668
-          ondemand: 22.63701
-          spot: 9.05476
+          cud1y: 17.61665
+          cud3y: 12.58339
+          ondemand: 27.96304
+          spot: 11.40216
         europe-west1:
-          cud1y: 12.56246
-          cud3y: 8.97324
+          cud1y: 15.04794
+          cud3y: 10.74859
           ondemand: 19.94049
-          spot: 7.97616
+          spot: 10.7378
         europe-west2:
-          cud1y: 13.00627
-          cud3y: 9.29025
-          ondemand: 20.64495
-          spot: 8.25794
+          cud1y: 15.98884
+          cud3y: 11.42067
+          ondemand: 25.3792
+          spot: 11.56205
         europe-west3:
-          cud1y: 13.46263
-          cud3y: 9.61623
-          ondemand: 21.36934
-          spot: 8.54769
+          cud1y: 16.4452
+          cud3y: 11.74664
+          ondemand: 26.10358
+          spot: 10.97893
         europe-west4:
-          cud1y: 11.97946
-          cud3y: 8.55681
-          ondemand: 19.01509
-          spot: 7.606
+          cud1y: 14.71348
+          cud3y: 10.50969
+          ondemand: 23.35481
+          spot: 10.30353
         us-central1:
-          cud1y: 11.40901
-          cud3y: 8.14935
-          ondemand: 18.10961
-          spot: 5.23459
+          cud1y: 13.89449
+          cud3y: 9.92469
+          ondemand: 22.05481
+          spot: 7.99624
         us-east1:
-          cud1y: 11.40901
-          cud3y: 8.14935
-          ondemand: 18.10961
-          spot: 5.23459
+          cud1y: 13.89449
+          cud3y: 9.92469
+          ondemand: 22.05481
+          spot: 7.99624
         us-east4:
-          cud1y: 11.40901
-          cud3y: 8.14935
-          ondemand: 18.10961
-          spot: 7.24381
+          cud1y: 14.14303
+          cud3y: 10.10222
+          ondemand: 22.44933
+          spot: 10.28162
         us-east5:
-          cud1y: 12.84996
-          cud3y: 9.17861
-          ondemand: 20.39685
-          spot: 8.1587
+          cud1y: 15.33544
+          cud3y: 10.95395
+          ondemand: 24.34206
+          spot: 10.85623
         us-west1:
-          cud1y: 11.40901
-          cud3y: 8.14935
-          ondemand: 18.10961
-          spot: 5.23459
+          cud1y: 13.89449
+          cud3y: 9.92469
+          ondemand: 22.05481
+          spot: 7.99624
     z3-highmem-88:
       regions:
         asia-northeast1:
-          cud1y: 7.32572
-          cud3y: 5.2327
-          ondemand: 11.62818
-          spot: 4.65125
+          cud1y: 10.55685
+          cud3y: 7.54064
+          ondemand: 16.75695
+          spot: 8.24139
         asia-south1:
-          cud1y: 5.93268
-          cud3y: 4.23766
-          ondemand: 9.417
-          spot: 3.76678
+          cud1y: 8.91526
+          cud3y: 6.36807
+          ondemand: 14.15124
+          spot: 7.08075
         asia-southeast1:
-          cud1y: 7.03765
-          cud3y: 5.02692
-          ondemand: 11.17091
-          spot: 4.46834
+          cud1y: 9.77167
+          cud3y: 6.9798
+          ondemand: 15.51064
+          spot: 7.50615
         australia-southeast1:
-          cud1y: 7.13063
-          cud3y: 5.09334
-          ondemand: 11.31851
-          spot: 4.52738
+          cud1y: 10.48603
+          cud3y: 7.49005
+          ondemand: 16.64453
+          spot: 6.87478
         europe-west1:
-          cud1y: 6.28123
-          cud3y: 4.48662
+          cud1y: 8.76671
+          cud3y: 6.26196
           ondemand: 9.97024
-          spot: 3.98808
+          spot: 6.74972
         europe-west2:
-          cud1y: 6.50313
-          cud3y: 4.64513
-          ondemand: 10.32248
-          spot: 4.12897
+          cud1y: 9.48571
+          cud3y: 6.77554
+          ondemand: 15.05672
+          spot: 7.43308
         europe-west3:
-          cud1y: 6.73131
-          cud3y: 4.80811
-          ondemand: 10.68467
-          spot: 4.27385
+          cud1y: 9.71389
+          cud3y: 6.93852
+          ondemand: 15.41892
+          spot: 6.70508
         europe-west4:
-          cud1y: 5.98973
-          cud3y: 4.27841
-          ondemand: 9.50754
-          spot: 3.803
+          cud1y: 8.72376
+          cud3y: 6.23128
+          ondemand: 13.84727
+          spot: 6.50053
         us-central1:
-          cud1y: 5.7045
-          cud3y: 4.07467
-          ondemand: 9.0548
-          spot: 2.6173
+          cud1y: 8.18998
+          cud3y: 5.85002
+          ondemand: 13.00001
+          spot: 5.37894
         us-east1:
-          cud1y: 5.7045
-          cud3y: 4.07467
-          ondemand: 9.0548
-          spot: 2.6173
+          cud1y: 8.18998
+          cud3y: 5.85002
+          ondemand: 13.00001
+          spot: 5.37894
         us-east4:
-          cud1y: 5.7045
-          cud3y: 4.07467
-          ondemand: 9.0548
-          spot: 3.6219
+          cud1y: 8.43853
+          cud3y: 6.02755
+          ondemand: 13.39453
+          spot: 6.65971
         us-east5:
-          cud1y: 6.42498
-          cud3y: 4.5893
-          ondemand: 10.19843
-          spot: 4.07935
+          cud1y: 8.91046
+          cud3y: 6.36465
+          ondemand: 14.14363
+          spot: 6.77688
         us-west1:
-          cud1y: 5.7045
-          cud3y: 4.07467
-          ondemand: 9.0548
-          spot: 2.6173
+          cud1y: 8.18998
+          cud3y: 5.85002
+          ondemand: 13.00001
+          spot: 5.37894
 metadata:
-  last_time_updated: 1735832707
+  last_time_updated: 1736107551

@@ -71,6 +71,10 @@ class InstanceScraper:
         self.gpus: Dict[str, GPUInfoModel] = {}
         self.__load_gpu_info()
 
+        # Load storage skus mapping
+        self.storage: Dict[str, StorageSKUModel] = {}
+        self.__load_storage_info()
+
         # Load families and machines data
         self.machine_family_sku: Dict[str, ComputeFamilySKUModel] = dict()
         self.general_machines_info: Dict[str, MachineInfoModel] = dict()
@@ -100,6 +104,16 @@ class InstanceScraper:
                 self.gpus[k] = GPUInfoModel(**v)
                 self.logger.debug(
                     f'Loaded {k} GPU sku data: {self.gpus[k]}'
+                )
+
+    def __load_storage_info(self):
+        with open(os.path.join(self.data_dir, 'storage-skus-mapping.yaml'), 'r') as file:
+            self.logger.debug('Loading storage mapping data')
+            skus_mapping_data = yaml.safe_load(file)
+            for k, v in skus_mapping_data.items():
+                self.storage[k] = StorageSKUModel(**v)
+                self.logger.debug(
+                    f'Loaded {k} storage sku data: {self.storage[k]}'
                 )
 
     def __load_machine_families_info(self):
@@ -201,7 +215,8 @@ class InstanceScraper:
                    list(skus_data['GPU'].get(usage_type, {}).values()) + \
                    list(skus_data['N1Standard'].get(usage_type, {}).values()) + \
                    list(skus_data['F1Micro'].get(usage_type, {}).values()) + \
-                   list(skus_data['G1Small'].get(usage_type, {}).values())
+                   list(skus_data['G1Small'].get(usage_type, {}).values()) + \
+                   list(skus_data['LocalSSD'].get(usage_type, {}).values())
 
         self.on_demand_skus = _get_usage_type_skus('OnDemand')
         self.spot_skus = _get_usage_type_skus('Preemptible')
@@ -230,7 +245,9 @@ class InstanceScraper:
             'RAM': {},
             'N1Standard': {},
             'F1Micro': {},
-            'G1Small': {}
+            'G1Small': {},
+            'LocalSSD': {},
+            'SSD': {}
         }
 
         request = billing_v1.ListSkusRequest(
@@ -327,7 +344,6 @@ class InstanceScraper:
         regional_sku = regional_skus[0]
         return regional_sku['pricing']['unit_price_units'] + regional_sku['pricing']['unit_price_nanos'] * 10 ** (-9)
 
-
     def calculate_regional_cpu_price(
         self,
         machine_name: str,
@@ -407,6 +423,26 @@ class InstanceScraper:
             )
             return None
 
+    def calculate_regional_local_ssd_price(
+        self,
+        machine_name: str,
+        local_ssd: float,
+        region: str,
+        available_skus: list
+    ) -> Optional[float]:
+        try:
+            return local_ssd * self.calculate_regional_sku_price(region, available_skus)
+        except ZeroSKURegexMatch:
+            self.logger.warning(
+                f'Zero LocalSSD SKUs are found for machine {machine_name} in region {region}'
+            )
+            return None
+        except MultipleSKURegexMatch:
+            self.logger.error(
+                f'Multiple LocalSSD SKUs are found for machine {machine_name} in region {region}'
+            )
+            return None
+
     def _calculate_pricing(self, usage_type: UsageType):
         """
         Calculates prices for GCP Compute instances for provided usage type.
@@ -420,6 +456,12 @@ class InstanceScraper:
         """
         self.logger.info(f'[GetPricing({usage_type})] Started')
         machines = self.machines
+
+        local_ssd_price_regex = self.storage['LocalSSD'].skus.get_usage_type(usage_type)
+        local_ssd_skus = list(
+            filter(lambda x: re.search(local_ssd_price_regex, x['description']), self.skus[usage_type])
+        )
+
         for machine_family in self.machine_family_sku:
             if machine_family not in self.pricing_data:
                 self.pricing_data[machine_family] = {}
@@ -463,7 +505,8 @@ class InstanceScraper:
 
                 _machine_general_info = self.general_machines_info[machine_name].model_dump(by_alias=True)
 
-                if self.general_machines_info[machine_name].gpu_support and self.general_machines_info[machine_name].gpu_count_by_default:
+                if (self.general_machines_info[machine_name].gpu_support and
+                        self.general_machines_info[machine_name].gpu_count_by_default):
                     gpu_name = self.general_machines_info[machine_name].default_gpu
                     gpu_price_regex = self.gpus[gpu_name].skus.get_usage_type(usage_type)
                     machine_gpu_skus = list(
@@ -506,7 +549,17 @@ class InstanceScraper:
                         if gpu_price:
                             price += gpu_price
 
-                    # todo: add local SSD price. Some machines have local SSD enabled by default
+                    if (self.general_machines_info[machine_name].local_ssd_support and
+                            self.general_machines_info[machine_name].local_ssd_enabled_by_default):
+                        local_ssd_price = self.calculate_regional_local_ssd_price(
+                            machine_name=machine_name,
+                            local_ssd=self.general_machines_info[machine_name].local_ssd_default_size,
+                            region=region,
+                            available_skus=local_ssd_skus
+                        )
+                        if local_ssd_price:
+                            # LocalSSD SKU provides pricing per month. That's local_ssd_price should be divided
+                            price += local_ssd_price / self.AVG_HOURS_PER_MONTH
 
                     if region not in self.pricing_data[machine_family][machine_name]['regions']:
                         self.pricing_data[machine_family][machine_name]['regions'][region] = {}
@@ -618,9 +671,3 @@ class InstanceScraper:
         self.calculate_cud1y_pricing()
         self.calculate_cud3y_pricing()
         self._make_flat_pricing_data()
-
-
-
-
-
-

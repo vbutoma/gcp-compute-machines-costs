@@ -247,11 +247,11 @@ t2a-standard-8,t2a,General purpose,8,32,0,0,,"Ampere Altra",0,0,,16,,0
 t2a-standard-16,t2a,General purpose,16,64,0,0,,"Ampere Altra",0,0,,32,,0
 t2a-standard-32,t2a,General purpose,32,128,0,0,,"Ampere Altra",0,0,,32,,0
 t2a-standard-48,t2a,General purpose,48,192,0,0,,"Ampere Altra",0,0,,32,,0
-t2d-standard-1,t2d,General purpose,1,4,0,0,,"AMD EPYC Milan",0,0,,10,,0
-t2d-standard-2,t2d,General purpose,2,8,0,0,,"AMD EPYC Milan",0,0,,10,,0
-t2d-standard-4,t2d,General purpose,4,16,0,0,,"AMD EPYC Milan",0,0,,10,,0
-t2d-standard-8,t2d,General purpose,8,32,0,0,,"AMD EPYC Milan",0,0,,16,,0
-t2d-standard-16,t2d,General purpose,16,64,0,0,,"AMD EPYC Milan",0,0,,32,,0
-t2d-standard-32,t2d,General purpose,32,128,0,0,,"AMD EPYC Milan",0,0,,32,,0
-t2d-standard-48,t2d,General purpose,48,192,0,0,,"AMD EPYC Milan",0,0,,32,,0
-t2d-standard-60,t2d,General purpose,60,240,0,0,,"AMD EPYC Milan",0,0,,32,,0
+t2d-standard-1,t2d,General purpose,1,4,0,0,,"EPYC Milan",0,0,,10,,0
+t2d-standard-2,t2d,General purpose,2,8,0,0,,"EPYC Milan",0,0,,10,,0
+t2d-standard-4,t2d,General purpose,4,16,0,0,,"EPYC Milan",0,0,,10,,0
+t2d-standard-8,t2d,General purpose,8,32,0,0,,"EPYC Milan",0,0,,16,,0
+t2d-standard-16,t2d,General purpose,16,64,0,0,,"EPYC Milan",0,0,,32,,0
+t2d-standard-32,t2d,General purpose,32,128,0,0,,"EPYC Milan",0,0,,32,,0
+t2d-standard-48,t2d,General purpose,48,192,0,0,,"EPYC Milan",0,0,,32,,0
+t2d-standard-60,t2d,General purpose,60,240,0,0,,"EPYC Milan",0,0,,32,,0
