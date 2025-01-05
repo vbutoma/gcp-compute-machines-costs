@@ -15,8 +15,8 @@ keywords = [
     "google-compute-machines-costs"
 ]
 
-homepage = "https://python-poetry.org/"
-repository = "https://github.com/python-poetry/poetry"
+homepage = "https://github.com/vbutoma/gcp-compute-machines-costs"
+repository = "https://github.com/vbutoma/gcp-compute-machines-costs"
 
 [tool.poetry.dependencies]
 python = "^3.12"
