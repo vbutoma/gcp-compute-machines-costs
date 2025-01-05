@@ -1,6 +1,6 @@
 # GCP Compute Machines Costs
 
-This repository provides python module for scraping and exporting GCP Compute Machines metadata and costs information.
+This project is a python package for scraping and exporting GCP Compute Machines metadata and costs information.
 
 # Requirements
 
