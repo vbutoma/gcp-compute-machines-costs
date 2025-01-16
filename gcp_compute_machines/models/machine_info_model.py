@@ -15,15 +15,18 @@ class MachineInfoModel(BaseModel):
     local_ssd_enabled_by_default: bool
     local_ssd_default_size: Optional[int] = None
 
+    # https://cloud.google.com/compute/docs/cpu-platforms
     cpu_platforms: str
 
     gpu_support: bool = False
     gpu_count_by_default: Optional[int] = None
     default_gpu: Optional[str] = None
 
+    #  https://cloud.google.com/network-tiers/docs/overview
     network_bandwidth: int = Field(alias='default_network_bandwidth')
     tier1_network_bandwidth: Optional[int] = None
 
+    # https://cloud.google.com/compute/docs/instances/nested-virtualization/overview
     nested_virtualization: bool = Field(alias='nested_virtualization_support')
 
     # region Scrapper auto-filled data
@@ -38,7 +41,6 @@ class MachineInfoModel(BaseModel):
     region: Optional[str] = None
 
     #endregion
-
 
     @field_validator('tier1_network_bandwidth', mode='before')
     @classmethod
