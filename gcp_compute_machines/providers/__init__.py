@@ -1,1 +1,3 @@
-from .base_machines_provider import GCPMachinesProvider
+from gcp_compute_machines.providers.base.base_machines_provider import GCPMachinesProvider
+from .gcloud_compute import *
+from gcp_compute_machines.providers.scraper import GCPMachinesScraper, ScrapedMachineInfoModel

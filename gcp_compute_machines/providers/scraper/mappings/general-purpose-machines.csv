@@ -1,4 +1,4 @@
-machine,family,family_type,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
+name,series,family,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
 c4a-standard-1,c4a,General purpose,1,4,0,0,,Google Axion,0,0,,10,,0
 c4a-standard-2,c4a,General purpose,2,8,0,0,,Google Axion,0,0,,10,,0
 c4a-standard-4,c4a,General purpose,4,16,0,0,,Google Axion,0,0,,23,,0

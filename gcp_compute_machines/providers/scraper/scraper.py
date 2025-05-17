@@ -6,7 +6,7 @@ import re
 import sys
 
 from datetime import datetime
-from gcp_compute_machines.models import *
+from gcp_compute_machines.providers.scraper.models import *
 from gcp_compute_machines.exceptions import ZeroSKURegexMatch, MultipleSKURegexMatch
 from gcp_compute_machines.constants import *
 
@@ -14,7 +14,7 @@ from google.cloud import \
     billing_v1, \
     compute_v1
 from google.oauth2 import service_account
-from typing import Optional, List, Dict, Any, Literal
+from typing import Optional, List, Dict, Any
 
 
 def nice(number: float, digits=5) -> float:
@@ -22,8 +22,7 @@ def nice(number: float, digits=5) -> float:
 
 
 class InstanceScraper:
-    # 365 * 24 / 12 - GCP uses the same value
-    AVG_HOURS_PER_MONTH = 730
+
 
     DEFAULT_REGION = 'us-east1'
     DEFAULT_DATA_DIR = os.path.join(os.path.dirname(__file__), 'mappings')
@@ -48,6 +47,7 @@ class InstanceScraper:
         data_dir: Optional[str] = None,
         machine_families: Optional[List[str]] = None,
     ):
+
         if logger is None:
             self.logger = loguru.logger
             self.logger.remove()
@@ -77,11 +77,11 @@ class InstanceScraper:
 
         # Load families and machines data
         self.machine_family_sku: Dict[str, ComputeFamilySKUModel] = dict()
-        self.general_machines_info: Dict[str, MachineInfoModel] = dict()
+        self.general_machines_info: Dict[str, ScrapedMachineInfoModel] = dict()
         self.__load_machine_families_info()
 
         self.pricing_data = {}
-        self.flat_pricing_data: List[MachineInfoModel] = []
+        self.flat_pricing_data: List[ScrapedMachineInfoModel] = []
         self.regions = []
         self.zones = []
         self.machines = {}
@@ -132,10 +132,10 @@ class InstanceScraper:
             with open(family_general_info_mapping_filepath, 'r') as csv_file:
                 reader = csv.reader(csv_file, delimiter=',')
                 headers = next(reader)
-                data = [MachineInfoModel(**{h:x for (h, x) in zip(headers, row)}) for row in reader]
+                data = [ScrapedMachineInfoModel(**{h:x for (h, x) in zip(headers, row)}) for row in reader]
                 self.logger.debug(data)
                 for machine_data in data:
-                    self.general_machines_info[machine_data.machine] = machine_data
+                    self.general_machines_info[machine_data.name] = machine_data
         self.logger.info(f'Loaded {len(self.general_machines_info)} machines')
 
     def get_regions(self) -> List[str]:
@@ -559,7 +559,7 @@ class InstanceScraper:
                         )
                         if local_ssd_price:
                             # LocalSSD SKU provides pricing per month. That's local_ssd_price should be divided
-                            price += local_ssd_price / self.AVG_HOURS_PER_MONTH
+                            price += local_ssd_price / AVG_HOURS_PER_MONTH
 
                     if region not in self.pricing_data[machine_family][machine_name]['regions']:
                         self.pricing_data[machine_family][machine_name]['regions'][region] = {}
@@ -599,13 +599,13 @@ class InstanceScraper:
             costs_per_usage = sud_mappings.get(family, base_costs)
             for family_machine in self.pricing_data[family]:
                 for region in self.pricing_data[family][family_machine]['regions']:
-                    hours_discount = self.AVG_HOURS_PER_MONTH / len(costs_per_usage)
+                    hours_discount = AVG_HOURS_PER_MONTH / len(costs_per_usage)
                     base_price = self.pricing_data[family][family_machine]['regions'][region]['ondemand']
                     machine_cost = 0
                     if family in sud_mappings:
                         for multiplier in costs_per_usage:
                             machine_cost += base_price * hours_discount * multiplier
-                        machine_cost /= self.AVG_HOURS_PER_MONTH
+                        machine_cost /= AVG_HOURS_PER_MONTH
                         self.pricing_data[family][family_machine]['regions'][region]['sud'] = machine_cost
 
     def calculate_spot_pricing(self):
@@ -616,6 +616,19 @@ class InstanceScraper:
 
     def calculate_cud3y_pricing(self):
         self._calculate_pricing(CommitmentThreeYearsUsage)
+
+    def dump_flat_pricing_data(
+        self,
+        flat_pricing_data_file_path: str = 'flat_gcp_machines_pricing.yaml'
+    ):
+        metadata = {
+            'last_time_updated': int(datetime.now().timestamp())
+        }
+        with open(flat_pricing_data_file_path, 'w') as file:
+            yaml.dump({
+                'metadata': metadata,
+                'machines': [x.model_dump() for x in self.flat_pricing_data]
+            }, file)
 
     def dump_pricing_info(
         self,
@@ -651,7 +664,7 @@ class InstanceScraper:
                         _machine_general_info[usage_type] = price
 
                     self.flat_pricing_data.append(
-                        MachineInfoModel(
+                        ScrapedMachineInfoModel(
                             **_machine_general_info,
                         )
                     )

@@ -1,4 +1,4 @@
-machine,family,family_type,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
+name,series,family,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
 m3-ultramem-32,m3,Memory Optimized,32,976,1,0,,"Ice Lake",0,0,,32,,1
 m3-ultramem-64,m3,Memory Optimized,64,1952,1,0,,"Ice Lake",0,0,,32,50,1
 m3-ultramem-128,m3,Memory Optimized,128,3904,1,0,,"Ice Lake",0,0,,32,100,1

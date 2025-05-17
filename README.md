@@ -20,28 +20,45 @@ pip install gcp-compute-machines
 
 Create new file scrape.py with the next content and change `gcp_project_name` and `gcp_sa_account_path` variables.
 
+## API Scraper
+
 ```python
-from gcp_compute_machines import InstanceScraper
+from gcp_compute_machines import GCPMachinesScraper
 
 gcp_project_name = 'CHANGE_ME'
 gcp_sa_account_path = 'CHANGE_ME'
 
-
-scraper = InstanceScraper(
-    gcp_project=gcp_project_name,
-    sa_path=gcp_sa_account_path
+scraper = GCPMachinesScraper(
+    gpc_project_name=gcp_project_name,
+    gcp_sa_account_path=gcp_sa_account_path
 )
-scraper.run(
-    # dump=True means that app saves the scrapped SKUs data locally for future reuses.
+machines = scraper.fetch_gcp_machines(
+    # dump=True means that app saves the scrapped SKUs data locally
     dump=True,
     # Set load=True if you want to use local SKUs data between sequential runs.
-    load=True
+    load=False
 )
+
 scraper.dump_pricing_info(
-    raw_pricing_data_file_path='./data/raw_gcp_machines_pricing.yaml',
-    flat_pricing_data_file_path='./data/flat_gcp_machines_pricing.yaml'
+    file_path='./data/flat_gcp_machines_pricing.yaml'
 )
 ```
+
+## Loader for https://gcloud-compute.com/
+
+This code downloads data from the website above and loads it into pydantic model.
+
+```python
+from gcp_compute_machines import GCloudComputeMachinesProvider
+
+scraper = GCloudComputeMachinesProvider()
+machines = scraper.fetch_gcp_machines()
+scraper.dump_pricing_info("./data/flat_gcloud_compute_machines_pricing.yaml")
+```
+
+Keep in mind that:
+* All pricing fields are normalized to hourly cost
+* Some fields were renamed or dropped
 
 # License 
 

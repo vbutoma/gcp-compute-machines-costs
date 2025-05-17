@@ -13,3 +13,5 @@ gcp_machines_pricing.yaml
 
 # build files
 dist
+
+sandbox/

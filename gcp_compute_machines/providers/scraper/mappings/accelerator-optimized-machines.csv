@@ -1,4 +1,4 @@
-machine,family,family_type,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
+name,series,family,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
 a2-ultragpu-1g,a2,Accelerator-optimized,12,170,1,1,375,Cascade Lake,1,1,NVIDIA_A100_80GB,24,,0
 a2-ultragpu-2g,a2,Accelerator-optimized,24,340,1,1,750,Cascade Lake,1,2,NVIDIA_A100_80GB,32,,0
 a2-ultragpu-4g,a2,Accelerator-optimized,48,680,1,1,1500,Cascade Lake,1,4,NVIDIA_A100_80GB,50,,0
