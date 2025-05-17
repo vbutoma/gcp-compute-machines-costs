@@ -1,0 +1,11 @@
+z3:
+  cpu:
+    ondemand: 'Z3 Instance Core.*'
+    cud1y: 'Commitment v1: Z3 Cpu.* 1 Year'
+    cud3y: 'Commitment v1: Z3 Cpu.* 3 Year'
+    spot: 'Spot Preemptible Z3 Instance Core.*'
+  ram:
+    ondemand: 'Z3 Instance Ram.*'
+    cud1y: 'Commitment v1: Z3 Ram .* 1 Year'
+    cud3y: 'Commitment v1: Z3 Ram .* 3 Year'
+    spot: 'Spot Preemptible Z3 Instance Ram.*'

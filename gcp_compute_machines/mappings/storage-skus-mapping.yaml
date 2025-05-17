@@ -1,6 +1,0 @@
-LocalSSD:
-  skus:
-    ondemand: 'SSD backed Local Storage .*'
-    cud1y: 'Commitment v1: Local SSD .* for 1 Year'
-    cud3y: 'Commitment v1: Local SSD .* for 3 Year'
-    spot: 'SSD backed Local Storage attached to Spot Preemptible .*'

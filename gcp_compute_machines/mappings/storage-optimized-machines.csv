@@ -1,3 +1,0 @@
-machine,family,family_type,VCPUs,ram,local_ssd_support,local_ssd_enabled_by_default,local_ssd_default_size,cpu_platforms,gpu_support,gpu_count_by_default,default_gpu,default_network_bandwidth,tier1_network_bandwidth,nested_virtualization_support
-z3-highmem-88,z3,Storage Optimized,88,704,1,1,36000,"Sapphire Rapids",0,0,,62,100,0
-z3-highmem-176,z3,Storage Optimized,176,1408,1,1,36000,"Sapphire Rapids",0,0,,100,200,0
