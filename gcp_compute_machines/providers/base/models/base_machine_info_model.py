@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from gcp_compute_machines.providers.base.models.helper_types import IntOrNone, FloatOrNone
 
 class GCPMachineType(BaseModel):
@@ -38,6 +38,8 @@ class GCPMachineType(BaseModel):
     region: str | None = None
 
     # endregion
+
+    model_config = ConfigDict(populate_by_name=True)
 
 
 __all__ = [
