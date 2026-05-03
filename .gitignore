@@ -15,3 +15,5 @@ gcp_machines_pricing.yaml
 dist
 
 sandbox/
+
+data/

@@ -27,10 +27,8 @@ class GCPMachinesScraper(GCPMachinesProvider):
         **kwargs
     ) -> list[ScrapedMachineInfoModel]:
         self._scraper.run(
-            # dump=True means that app saves the scrapped SKUs data locally
-            dump=True,
-            # Set load=True if you want to use local SKUs data between sequential runs.
-            load=False
+            dump=dump,
+            load=load
         )
         return self._scraper.flat_pricing_data
 
